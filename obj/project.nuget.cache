@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "iFe5gVCzM6I=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\buxto\\source\\repos\\invoiceManager\\GroupFinal3280.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\buxto\\.nuget\\packages\\system.data.oledb\\9.0.10\\system.data.oledb.9.0.10.nupkg.sha512"
+  ],
+  "logs": []
+}
