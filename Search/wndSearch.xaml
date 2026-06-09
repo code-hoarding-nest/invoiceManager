@@ -1,0 +1,55 @@
+<Window x:Class="GroupFinal3280.wndSearch"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GroupFinal3280"
+        mc:Ignorable="d"
+        Title="wndSearch" Height="450" Width="800">
+    <Grid x:Name="lblTestsql" Background="#FFFFE6A7">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"></ColumnDefinition>
+            <ColumnDefinition Width="20*"></ColumnDefinition>
+            <ColumnDefinition Width="20*"></ColumnDefinition>
+            <ColumnDefinition Width="20*"></ColumnDefinition>
+            <ColumnDefinition Width="20*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height= "16*"></RowDefinition>
+            <RowDefinition Height= "16*"></RowDefinition>
+            <RowDefinition Height= "33*"></RowDefinition>
+            <RowDefinition Height= "33*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label x:Name="lblSearchWindowTitle" Content="Invoice Search" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="3" Style="{DynamicResource LblWindowTitle}"/>
+        <Button x:Name="cmdReset" Content="Reset"  Grid.Column="4" Click="cmdReset_Click" Style="{DynamicResource ButtonLight}"/>
+
+        <DataGrid Style="{DynamicResource DataGridStyle1}" x:Name="dtGridInvoices" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="5" Grid.RowSpan="2" >
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="Padding" Value="5"/>
+                    <Setter Property="Background" Value="#FFEBB586"/>
+                    <Setter Property="Foreground" Value="#FF432818"/>
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+        </DataGrid>
+
+        <StackPanel Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Style="{DynamicResource HorizontalStackPanel}">
+            <Button x:Name="cmdCancel" Content="Cancel" Style="{DynamicResource ButtonLight}" Click="cmdCancel_Click"/>
+            <Button x:Name="cmdSelectInvoice" Content="Select Invoice" Style="{DynamicResource ButtonLight}" Click="cmdSelectInvoice_Click"/>
+        </StackPanel>
+        <StackPanel x:Name="stkInvoiceDate" Grid.Column="3" Grid.Row="1" >
+            <Label x:Name="lblInvoiceDate" Content="Invoice Date" Style="{DynamicResource ComboLabel1}" ></Label>
+            <ComboBox x:Name="cmboInvoiceDate" SelectionChanged="DropDownChanged" Style="{DynamicResource ComboBoxStyle1}" HorizontalAlignment="Center" />
+        </StackPanel>
+        <StackPanel x:Name="stkInvoiceNum" Grid.Column="2" Grid.Row="1">
+            <Label x:Name="lblInvoiceNum" Content="Invoice Number" Style="{DynamicResource ComboLabel1}"></Label>
+            <ComboBox Style="{DynamicResource ComboBoxStyle1}" x:Name="cmboInvoiceNum" SelectionChanged="DropDownChanged" HorizontalAlignment="Center"/>
+        </StackPanel>
+        <StackPanel x:Name="stkInvoiceCost" Grid.Column="4" Grid.Row="1">
+            <Label x:Name="lblInvoiceCost" Content="Invoice Cost" Style="{DynamicResource ComboLabel1}"></Label>
+            <ComboBox x:Name="cmboInvoiceCost" SelectionChanged="DropDownChanged"  Style="{DynamicResource ComboBoxStyle1}" HorizontalAlignment="Center"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

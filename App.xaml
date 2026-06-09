@@ -1,0 +1,9 @@
+﻿<Application x:Class="GroupFinal3280.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:GroupFinal3280"
+             StartupUri="/Main/MainWindow.xaml">
+    <Application.Resources>
+         <ResourceDictionary Source="/3280FinalDictionary.xaml"/>
+    </Application.Resources>
+</Application>
